@@ -40,3 +40,32 @@ const findInvalidCards = arr => {
         invalidCard.push(arr);
     }
 };
+
+//Identifies credit card companies and returns in an array.
+
+let invalidCompany = [];
+const idInvalidCardCompanies = arr => {
+    const firstLetter = arr.map(currentValue => {
+        return currentValue[0];
+    });
+    for(let i =0; i < firstLetter.length; i++) {
+        if (firstLetter[i] === 3) {
+            let amex ='Amex'
+            invalidCompany.push(amex);
+    0    } else if (firstLetter[i] === 4) {
+        let visa = "Visa";
+        invalidCompany.push(visa)
+    } else if (firstLetter[i] === 5) {
+        let masterCard = 'MasterCard';
+        invalidCompany.push(masterCard);
+    } else if (firstLetter[i] === 6) {
+        let discover = 'Discover';
+        invalidCompany.push(discover);
+    } else {
+        return 'Company not found';
+    }
+
+    
+    }
+
+};
