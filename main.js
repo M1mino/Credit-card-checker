@@ -1,4 +1,5 @@
 //Credit card verification feature. Returns True if the card is valid.
+
 const validCred = card => {
     let shortCard = card;
     let shortCard1 = shortCard.pop();
@@ -29,4 +30,13 @@ const validCred = card => {
     }
 
     
+};
+
+//Checks and returns invalid cards into an array.
+
+let invalidCard = [];
+const findInvalidCards = arr => {
+    if(validCred(arr) === false) {
+        invalidCard.push(arr);
+    }
 };
